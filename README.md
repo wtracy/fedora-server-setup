@@ -1,4 +1,4 @@
-# fedora-server-setup
+# Fedora Server Setup
 
 This is a collection of notes on setting up a Fedora-based server. They are intended for my personal use. If they're useful to someone else, cool.
 
@@ -20,7 +20,7 @@ I use Let's Encrypt and Certbot for my SSL certificates. Certbot has [excellent 
 
 ## Backup
 
-I use Restic to back up everything to Backblaze. Backplaze provides [instructions](https://www.backblaze.com/docs/cloud-storage-integrate-restic-with-backblaze-b2).
+I use Restic to back up everything to Backblaze. Backblaze provides [instructions](https://www.backblaze.com/docs/cloud-storage-integrate-restic-with-backblaze-b2).
 
 ## Email
 
