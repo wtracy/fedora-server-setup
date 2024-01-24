@@ -32,4 +32,16 @@ I'm potentially interested in switching to a more modern email daemon.
 
 ## Log monitoring
 
-[Nagios](https://www.nagios.org) and Logwatch.
+### Logwatch
+
+You may need to [set up Cronie to run cronjobs](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/monitoring-and-automation/Automating_System_Tasks/) first.
+
+```
+sudo dnf install logwatch
+```
+
+Then update `/etc/logwatch/conf/logwatch.conf`. This file overrides defaults located in `/usr/share/logwatch/default.conf/logwatch.conf`. If nothing else, you will need to set up the To and From email addresses.
+
+### Nagios
+
+[Nagios](https://www.nagios.org).
