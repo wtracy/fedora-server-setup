@@ -26,7 +26,7 @@ I use Restic to back up everything to Backblaze. Backblaze provides [instruction
 
 I currently use Postfix to forward email out through Sendgrid rather than trying to maintain my own outbound email server. Sendgrid has [instructions](https://docs.sendgrid.com/for-developers/sending-email/postfix).
 
-Install the `mailx` package and use the `mail` command to test.
+Install the `mailx` package and use the `mail` command to test. (Though the default `sendmail` script seems to do the job?)
 
 I'm potentially interested in switching to a more modern email daemon.
 
