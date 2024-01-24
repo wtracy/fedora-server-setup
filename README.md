@@ -45,3 +45,11 @@ Then update `/etc/logwatch/conf/logwatch.conf`. This file overrides defaults loc
 ### Nagios
 
 [Nagios](https://www.nagios.org).
+
+```
+sudo dnf install nagios nagios-plugins
+sudo systemctl start nagios
+sudo systemctl enable nagios
+```
+
+Then point your browser at `<hostname>/nagios`. The default name/password is `nagiosadmin` and `nagiosadmin`.
