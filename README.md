@@ -64,6 +64,6 @@ Then point your browser at `<hostname>/nagios`. The default name/password is `na
 sudo dnf install mediawiki
 ```
 
-Then follow instructions in `/usr/share/doc/mediawiki/README.RPM`.
+Then follow instructions in `/usr/share/doc/mediawiki/README.RPM`. If you have permissions issues, be sure to check whether SELinux is the culprit.
 
 [Configure email](https://www.mediawiki.org/wiki/Manual:$wgSMTP) and [rate limiting](https://www.mediawiki.org/wiki/Manual:$wgRateLimits).
