@@ -50,8 +50,6 @@ Then update `/etc/logwatch/conf/logwatch.conf`. This file overrides defaults loc
 
 ### Nagios
 
-[Nagios](https://www.nagios.org).
-
 ```
 sudo dnf install nagios nagios-plugins
 sudo systemctl start nagios
@@ -59,3 +57,13 @@ sudo systemctl enable nagios
 ```
 
 Then point your browser at `<hostname>/nagios`. The default name/password is `nagiosadmin` and `nagiosadmin`.
+
+## Mediawiki
+
+```
+sudo dnf install mediawiki
+```
+
+Then follow instructions in `/usr/share/doc/mediawiki/README.RPM`.
+
+[Configure email](https://www.mediawiki.org/wiki/Manual:$wgSMTP) and [rate limiting](https://www.mediawiki.org/wiki/Manual:$wgRateLimits).
