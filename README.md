@@ -30,6 +30,12 @@ Install the `mailx` package and use the `mail` command to test. (Though the defa
 
 I'm potentially interested in switching to a more modern email daemon.
 
+By default, SELinux blocks your web server from sending email. If you have a webapp that needs to send email, you can resolve this with:
+
+```
+sudo setsebool -P httpd_can_network_connect 1
+```
+
 ## Log monitoring
 
 ### Logwatch
