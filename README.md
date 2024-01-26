@@ -66,7 +66,7 @@ sudo dnf install mediawiki
 
 Then follow instructions in `/usr/share/doc/mediawiki/README.RPM`. If you have permissions issues, be sure to check whether SELinux is the culprit.
 
-[Configure email](https://www.mediawiki.org/wiki/Manual:$wgSMTP) and [rate limiting](https://www.mediawiki.org/wiki/Manual:$wgRateLimits).
+[Configure email](https://www.mediawiki.org/wiki/Manual:$wgSMTP) and [rate limiting](https://www.mediawiki.org/wiki/Manual:$wgRateLimits) and a [custom site notice](https://www.hostknox.com/knowledgebase/653/How-to-display-a-site-notice-at-the-top-of-pages-in-MediaWiki.html).
 
 ### Restrict new page creation
 
