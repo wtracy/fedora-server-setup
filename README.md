@@ -67,3 +67,28 @@ sudo dnf install mediawiki
 Then follow instructions in `/usr/share/doc/mediawiki/README.RPM`. If you have permissions issues, be sure to check whether SELinux is the culprit.
 
 [Configure email](https://www.mediawiki.org/wiki/Manual:$wgSMTP) and [rate limiting](https://www.mediawiki.org/wiki/Manual:$wgRateLimits).
+
+### Restrict new page creation
+
+```
+$wgGroupPermissions['*']['createpage'] = false;
+$wgGroupPermissions['user']['createpage'] = false;
+$wgGroupPermissions['sysop']['createpage'] = true;
+```
+
+### Short URLs
+
+In virtual site .conf file:
+
+```
+RewriteEngine on
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-d
+RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/index.php [L]
+```
+
+In `LocalSettings.php`:
+
+```
+$wgArticlePath = "/$1";
+```
