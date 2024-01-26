@@ -5,7 +5,7 @@ This is a collection of notes on setting up a Fedora-based server. They are inte
 ## Firewall
 
 ```
-sudo yum install firewalld
+sudo dnf install firewalld
 sudo systemctl start firewalld
 sudo systemctl enable firewalld
 sudo firewall-cmd --zone=public --permanent --add-service=ssh
@@ -30,7 +30,7 @@ Install the `mailx` package and use the `mail` command to test. (Though the defa
 
 I'm potentially interested in switching to a more modern email daemon.
 
-By default, SELinux blocks your web server from sending email. If you have a webapp that needs to send email, you can resolve this with:
+By default, SELinux blocks your web server from making outbound network connections. If you have a webapp that needs to send email, you will need to resolve this with:
 
 ```
 sudo setsebool -P httpd_can_network_connect 1
@@ -76,9 +76,9 @@ $wgGroupPermissions['user']['createpage'] = false;
 $wgGroupPermissions['sysop']['createpage'] = true;
 ```
 
-### Short URLs
+### Short URLs with Apache HTTPD
 
-In virtual site .conf file:
+In virtualserver .conf file:
 
 ```
 RewriteEngine on
